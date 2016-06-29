@@ -104,13 +104,19 @@ namespace StandByAnimation
         }
         private void mainform_Resize(object sender, EventArgs e)
         {
-            m_oStandByAnimation.Left = (int)(this.Width / 2) - (int)(m_oStandByAnimation.Width / 2);
-            m_oStandByAnimation.Top = (int)(this.Height / 2) - (int)(m_oStandByAnimation.Height / 2);
+            if (m_oStandByAnimation != null)
+            {
+                m_oStandByAnimation.Left = (int)(this.Width / 2) - (int)(m_oStandByAnimation.Width / 2);
+                m_oStandByAnimation.Top = (int)(this.Height / 2) - (int)(m_oStandByAnimation.Height / 2);
+            }
         }
         private void CenterAnimation()
         {
-            m_oStandByAnimation.Left = (int)(this.Width / 2) - (int)(m_oStandByAnimation.Width / 2);
-            m_oStandByAnimation.Top = (int)(this.Height / 2) - (int)(m_oStandByAnimation.Height / 2);
+            if (m_oStandByAnimation != null)
+            {
+                m_oStandByAnimation.Left = (int)(this.Width / 2) - (int)(m_oStandByAnimation.Width / 2);
+                m_oStandByAnimation.Top = (int)(this.Height / 2) - (int)(m_oStandByAnimation.Height / 2);
+            }
         }
         public void ShowAnimation()
         {
